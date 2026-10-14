@@ -6,14 +6,14 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:03:30 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/14 22:45:36 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/15 01:12:23 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../libft.h"
+#include "libft.h"
 
 static	int	ft_is_space(const char c)
 {
