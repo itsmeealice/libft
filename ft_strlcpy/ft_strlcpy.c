@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 10:15:50 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/14 16:37:23 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/15 01:02:14 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_strlcpy(char *dest, const char *src, size_t size)
 	int	i;
 
 	i = 0;
-	
 	while (src[i] && i < size - 1)
 	{
 		dest[i] = src[i];
@@ -27,24 +26,16 @@ void	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 }
 
-
 // int	main(void)
 // {
 // 	char src[] = "ABCDE";
 // 	char dest[] = "thisismydestinationstring";
-	
 // 	printf("original implementation\n");
-
 // 	printf("Before source: %s  destination: %s \n", src, dest);
 // 	ft_strlcpy(dest, src, 4);
 // 	printf("Before source: %s  destination: %s \n", src, dest);
-
-
 // 	printf("my implementation\n");
-
 // 	printf("Before source: %s  destination: %s \n", src, dest);
 // 	ft_strlcpy(dest, src, 4);
 // 	printf("Before source: %s  destination: %s \n", src, dest);
-	
 // }
-

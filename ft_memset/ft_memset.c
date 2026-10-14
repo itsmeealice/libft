@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:31:41 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/12 18:16:52 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/15 01:01:18 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*p;
-	size_t	i;
+	size_t			i;
 
 	p = (unsigned char *)b;
 	i = 0;
