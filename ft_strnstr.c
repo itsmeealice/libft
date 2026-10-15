@@ -6,13 +6,13 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 14:28:30 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 01:05:47 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/15 02:05:45 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include "../libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

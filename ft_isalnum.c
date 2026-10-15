@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:04:05 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/12 11:42:14 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/15 02:06:13 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <bsd/string.h>
-#include "../libft.h"
+#include "libft.h"
 
 int	ft_isalnum(char c)
 {

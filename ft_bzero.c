@@ -6,19 +6,18 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:57:52 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/12 18:37:08 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/15 02:07:15 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	char	*p;
-	size_t	string_len;
 
 	p = (char *)s;
 	s = ft_memset(p, '\0', n);
