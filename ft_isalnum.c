@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:04:05 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 02:06:13 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/15 03:27:42 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int	ft_isalnum(char c)
 	return (0);
 }
 
-int	main(void)
-{
-	int	is_alnum;
+// int	main(void)
+// {
+// 	int	is_alnum;
 
-	is_alnum = ft_isalnum('0');
-	printf("%d", is_alnum);
-}
+// 	is_alnum = ft_isalnum('0');
+// 	printf("%d", is_alnum);
+// }
