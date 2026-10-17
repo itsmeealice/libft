@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:00:33 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/13 12:48:19 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:16:01 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (s_string + i);
 		i++;
 	}
-	if (s_string[i] == '\0' && searched_character == '\0')
-		return (s_string + i);
 	return (NULL);
 }
+// int	main(void)
+// {
+// 	char * string = (char *) ft_memchr("alice", 0, 6);
+// 	printf("%s", string);
+// }
