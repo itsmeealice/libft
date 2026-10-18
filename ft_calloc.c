@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 22:55:43 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 02:06:41 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/17 15:30:35 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ void	*ft_calloc(size_t nitems, size_t size)
 	size_t	total_memory;
 	size_t	i;
 
-	if (size == 0 || (nitems > SIZE_MAX / size))
+	if (size == 0)
+	{
+		return (malloc(nitems));
+	}
+	if (nitems > SIZE_MAX / size)
 		return (NULL);
 	total_memory = nitems * size;
 	ptr = malloc(total_memory);
@@ -44,16 +48,16 @@ void	*ft_calloc(size_t nitems, size_t size)
 // 	if (int_ptr == NULL)
 // 	{
 // 		printf("%s", "calloc didnt work. ptr null\n");
-// 		return 1;
+// 		return (1);
 // 	}
 // 	else 
 // 	{
 // 		printf("%s", "calloc successful\n");
 
-// 		for(int i = 0; i < 5; i++)
+// 		for (int i = 0; i < 5; i++)
 // 		{
 // 			printf("%d ", int_ptr[i]);
 // 		}
-// 		return 0;
-// 	}		
+// 		return (0);
+// 	}
 // }

@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:03:30 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 01:12:23 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/18 13:17:32 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ static int	ft_calculate_int(const char **s, int number)
 	int	i;
 
 	i = 0;
+	number = 0;
 	while ((*s)[i] != '\0')
 	{
 		if (ft_isdigit((*s)[i]))
 			number = (number * 10) + ((*s)[i] - 48);
 		else
-			return (0);
+			break ;
 		i++;
 	}
 	return (number);
@@ -53,14 +54,14 @@ int	ft_atoi(const char *s)
 		s++;
 	if (*s == '+')
 		s++;
-	if (*s == '-')
+	else if (*s == '-')
 	{
 		sign *= (-1);
 		s++;
 	}
 	while (s[i] != '\0' && !ft_isdigit(s[i]))
 	{
-		if (ft_isalpha(s[i]))
+		if (ft_isalpha(s[i]) || s[i] == '+' || s[i] == '-')
 			return (0);
 		i++;
 	}
@@ -70,7 +71,7 @@ int	ft_atoi(const char *s)
 
 // int	main(void)
 // {
-// 	char str_no[] = "		--17";
+// 	char str_no[] = "-+-+546:5";
 // 	int d = ft_atoi(str_no);
 // 	printf("%d", d);
 // }

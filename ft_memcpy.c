@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 18:40:47 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/13 09:52:41 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/17 14:03:13 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*byte_dest;
-	char	*byte_src;
-	size_t	i;
+	unsigned char		*byte_dest;
+	const unsigned char	*byte_src;
+	size_t				i;
 
-	byte_dest = (char *) dest;
-	byte_src = (char *) src;
+	byte_dest = (unsigned char *) dest;
+	byte_src = (unsigned char *) src;
+    
+    if(n > 0 && src == NULL && dest == NULL)
+		return(NULL);
 	i = 0;
 	while (i < n)
 	{
@@ -29,6 +32,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
 
 // int	main(void)
 // {
@@ -51,7 +55,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 // 	//** test 3 */ overlapping memory area
 
-// 	char p[] = "abcde";	
-// 	memcpy((char*)(p + 1), (char*)p, 3);
-// 	printf("%s", (char *)(p));
+// 	// char p[] = "abcde";	
+// 	// memcpy((char*)(p + 1), (char*)p, 3);
+// 	// printf("%s", (char *)(p));
+
+// 	//** test4  */
+
+// 	char *result = (char *)(ft_memcpy(NULL, NULL, 0));
+// 	printf("%s", result);
 // }
