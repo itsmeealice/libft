@@ -40,20 +40,30 @@ ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_lstnew.c \
-ft_lstadd_front.c
+ft_lstadd_front.c \
+ft_lstadd_back.c \
+ft_lstlast.c \
+ft_lstsize.c \
+ft_lstdelone.c \
+ft_lstclear.c \
+ft_lstiter.c
 
 OBJECTS = $(SOURCES:.c=.o)
+
+B0 = $(BS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
+bonus: $(NAME)
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) 
 
 fclean: clean
 	rm -f $(NAME)

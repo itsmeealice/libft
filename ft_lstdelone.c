@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 12:11:27 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/22 14:51:41 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/22 21:04:20 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,39 +15,38 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void *del(t_list *lst, t_list *node)
-{
-    t_list *aux_node = lst;
-
-    while(!aux_node && aux_node -> next != node)
-    {
-        aux_node = aux_node -> next;
-    }
-    if(aux_node -> next == node)
-    {
-        aux_node -> next = aux_node->next->next;
-        free(node->content);
-    }
-}
+// static void del(void *content_to_delete)
+// {
+//     char *content = (char *)content_to_delete;
+//    free(content);
+// }
 
 void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    del(lst);
+    (*del)(lst ->content);
+    free(lst);
 }
-int main(void)
-{
-    t_list *lista = NULL;
-    t_list *node = lista;
-    ft_lstadd_front(&lista, ft_lstnew("hello"));
-    ft_lstadd_front(&lista, ft_lstnew("world"));
-    ft_lstadd_back(&lista, ft_lstnew("42school"));
-    while(node)
-    {
-        if(ft_strncmp(node -> content, "world", 5))
-        {
-            ft_lstdelone(lista, (*del));
-        }
-    }
-    
-   
-}
+// static void ft_print_list(t_list *lista)
+// {
+//     t_list *node = lista;
+//     while(node)
+//     {
+//         printf("%s", (char*)node->content);
+        
+//         node = node -> next;
+//     }
+
+// }
+// int main(void)
+// {
+//      t_list *lista = NULL;
+//     ft_lstadd_back(&lista, ft_lstnew(ft_strdup("1")));
+//     ft_lstadd_back(&lista, ft_lstnew(ft_strdup("2")));
+//     ft_lstadd_back(&lista, ft_lstnew(ft_strdup("3")));
+//     t_list *tmp;
+
+//     tmp = lista->next;
+//     lista->next = tmp->next;
+//     ft_lstdelone(tmp, del);
+//     ft_print_list(lista);
+// }

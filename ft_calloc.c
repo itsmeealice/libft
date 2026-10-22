@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 22:55:43 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/17 15:30:35 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/22 21:19:59 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_calloc(size_t nitems, size_t size)
 	size_t	total_memory;
 	size_t	i;
 
-	if (size == 0)
+	if (size == 0 || nitems == 0)
 	{
-		return (malloc(nitems));
+		return (malloc(1));
 	}
 	if (nitems > SIZE_MAX / size)
 		return (NULL);

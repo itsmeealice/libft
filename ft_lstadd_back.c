@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 12:00:34 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/22 12:09:45 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/22 16:33:38 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,23 @@
 
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
-    if(!lst || !new)
-        return;
-    while ((*lst) -> next)
+    if(!*lst)
     {
-       (*lst) = (*lst) -> next;
+        *lst = new;
+        return;
+    }
+    t_list *node = *lst;
+    
+    while (node -> next)
+    {
+       node = node -> next;
     }
     
-    (*lst) -> next = new;
+    node -> next = new;
 }
 // int main(void)
 // {
 //     t_list *lista = NULL;
-//     ft_lstadd_front(&lista, ft_lstnew("hello"));
-//     ft_lstadd_front(&lista, ft_lstnew("world"));
 //     ft_lstadd_back(&lista, ft_lstnew("42school"));
-//     printf("%s", (char *) lista->next->content);
+//     printf("%s", (char *) lista->content);
 // }
