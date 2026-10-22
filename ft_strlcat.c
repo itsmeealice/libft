@@ -6,13 +6,14 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 10:19:47 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/17 12:49:20 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/18 18:50:30 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 #include "libft.h"
 
 static	size_t	ft_safe_strlen(char *str, size_t size)
@@ -54,10 +55,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 // int	main(void)
 // {
-// 	char *str = "123";
-// 	char buff1[0xF00] = "";
-// 	size_t max = 0;
-// 	size_t r1 = ft_strlcat(buff1, str, max);
-// 	printf("%d\n", (int)r1);
-// 	printf("%s ", buff1);
+// 	char *s = malloc(300);
+// 	int len_software =  ft_safe_strlen("software", 8);
+// 	int len_engineer = ft_safe_strlen("engineer", 8);
+// 	ft_strlcat(s, "software", len_software);
+// 	ft_strlcat(s, "engineer", len_engineer);
+// 	printf("%s", s);
+
 // }

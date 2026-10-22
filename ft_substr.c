@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 12:30:07 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 15:02:46 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/19 15:57:57 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,78 @@
 #include <stdlib.h>
 #include "libft.h"
 
+
+void	check_allocation(char  *s)
+{
+	int	i;
+
+	if(s == NULL)
+	{
+		printf("CHECK FAILED. STRING NULL");
+		return;
+	}
+
+	i = 0;
+	printf("=====checking allocation ======\n");
+	while (i < 200)
+	{
+		printf("%d ", s[i]);
+		i++;
+	}
+	printf("======= checked allocation =========\n");
+}
+
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *substr = malloc(len + 1);
-	size_t s_length = ft_strlen(s);	
-	if (substr == NULL)
-		return NULL;
-	if (start > s_length)
-		return "";
-	if (start + len > s_length)
-	{
-		return (s + start);
-	}
+	unsigned int	j;
+	unsigned int 	k;
 	unsigned int	i;
-	unsigned int k = 0;
 
-	for (i = start; i < start + len; i++)
+	k = 0;
+	if (s == NULL || len ==0 )
 	{
-		substr[k++] = s[i];
+		char *substr = malloc(1);
+		if(substr == NULL)
+			return NULL;
+		substr[0] = '\0';
+		return (substr);
 	}
-	substr[k] ='\0';
+	size_t s_length = ft_strlen(s);	
+	if (start > s_length)
+	{
+		char *substr = malloc(1);
+		if(substr == NULL)
+			return NULL;
+		substr[0] = '\0';
+		return (substr);
+	}
+	
+
+	while(k < len && s[start + k] != '\0')
+		k++;
+
+	i = start;
+	j = 0;
+	char *substr = malloc(k + 1);
+	if (substr == NULL)
+	{
+		//printf("%s", "allocation failed");
+		return NULL;
+	}
+	while (i < start + k)
+	{
+		substr[j] = s[i];
+		i++;
+		j++;
+
+	}
+	substr[j] ='\0';
 	return substr;
 }
-int	main(void)
-{
-	char text[] = "Anaaremere";
-	printf ("%s", ft_substr(text, 3, 4));
-}
+// int	main(void)
+// {
+// 	char *s = "tripouille";
+// 	ft_substr(s, 0, 42000);
+	
+// }
