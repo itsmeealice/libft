@@ -57,9 +57,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
-
-bonus: $(NAME)
-
+	
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
