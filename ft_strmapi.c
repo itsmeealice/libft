@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 14:39:57 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/21 15:10:06 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/23 11:39:46 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,22 @@
 
 // char	touppercase(unsigned int c, char a)
 // {
-	
 //     if(c % 2 == 0)
 //     {
 //         a = ft_toupper(a);
 //     }
-	
 // 	return (a);
 // }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int 	s_len = (int)ft_strlen(s);
+	int		s_len;
 	int		i;
+	char	*new_s;
 
-	char	*new_s = malloc(s_len + 1);
+	s_len = (int)ft_strlen(s);
+	new_s = malloc(s_len + 1);
 	i = 0;
-
 	if (new_s == NULL)
 		return (NULL);
 	while (i < s_len)
@@ -41,15 +40,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	new_s[i] = '\0';
-
 	return (new_s);
 }
 // int main(void)
 // {
 //     char s[100] = "onetwothree";
-
 // 	char *new_s = ft_strmapi(s, touppercase);
-
 // 	printf("%s", new_s);
-
 // }

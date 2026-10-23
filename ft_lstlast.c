@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 11:48:04 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/22 17:32:27 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/23 00:13:33 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,28 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void del(void *content_to_delete)
+void	del(void *content_to_delete)
 {
-    char *content = (char *)content_to_delete;
-   free(content);
-}
-t_list *ft_lstlast(t_list *lst)
-{
-   
-    if(!lst)
-    {
-      return (NULL);
-    }
+	char	*content;
 
-     t_list *node = lst;
-    
-     while(node->next)
-     {
-        node = node -> next; 
-         
-     }
-     return (node);
+	content = (char *)content_to_delete;
+	free (content);
+}
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	t_list	*node;
+
+	if (!lst)
+	{
+		return (NULL);
+	}
+	node = lst;
+	while (node->next)
+	{
+		node = node -> next;
+	}
+	return (node);
 }
 // int main(void)
 // {

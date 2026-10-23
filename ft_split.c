@@ -1,92 +1,100 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/23 12:05:48 by apazitor          #+#    #+#             */
+/*   Updated: 2026/10/23 15:40:45 by apazitor         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-
-
-int separators(char *s, char c, int sep[])
+static int	separators_no_loc(char const *s, char c, int sep[])
 {
-    int s_len = strlen(s);
-    int k = 0;
+	size_t	i;
+	size_t	k;
 
-    sep[0] = -1; 
-    for (int i = 0; i < s_len; i++) 
-    {
-        if (s[i] == c)
-        {
-            ++k;
-            sep[k] = i;
-        }
-    }
-    ++k;
-    sep[k] = s_len; 
-    return k;
+	k = 0;
+	sep[0] = -1;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			sep[++k] = i;
+		i++;
+	}
+	sep[++k] = i;
+	return (k + 1);
 }
 
-int word_count(char *s, char c)
+static char	*copy_string(char const *s, int ind_start, int ind_finish)
 {
-    int sep[100];
-    int no_of_sep = separators(s, c, sep);
-    int words = 0;
+	char	*new_str;
+	int		k;
+	int		i;
 
-    // CHANGED 
-    for (int i = 0; i < no_of_sep; i++)
-    {
-        if (sep[i + 1] - sep[i] > 1) // CHANGED: compare boundaries directly
-            words++;
-    }
-    return words;
+	new_str = malloc(ind_finish - ind_start + 2);
+	if (!new_str)
+		return (NULL);
+	k = -1;
+	i = ind_start;
+	while (ind_start <= ind_finish)
+		new_str[++k] = s[ind_start++];
+	new_str[++k] = '\0';
+	return (new_str);
 }
 
-char *copy_string(char *s, int ind_start, int ind_finish)
+static void	free_words(char **mat, int words)
 {
-    char *new_str = malloc(ind_finish - ind_start + 2);
-    if (!new_str) // ADDED: handle allocation failure
-        return NULL;
-
-    int k = 0;
-    for (int i = ind_start; i <= ind_finish; i++)
-        new_str[k++] = s[i];
-
-    new_str[k] = '\0'; // CHANGED: terminate with the null character, not 'N'
-    return new_str;
+	while (words--)
+		free(mat[words]);
+	free(mat);
 }
 
-char **ft_split(char const *s, char c) 
+static int	count_words(int sep[], int *sep_no, char const *s, char c)
 {
-    if (!s) 
-        return NULL;
+	int	i;
+	int	words;
 
-    int words_count = word_count((char *)s, c); 
-    char **word_matrix = malloc((words_count + 1) * sizeof(char *));
-    if (!word_matrix) // ADDED: handle allocation failure
-        return NULL;
+	i = -1;
+	words = 0;
+	*sep_no = separators_no_loc(s, c, sep);
+	while (++i < *sep_no - 1)
+		if ((sep[i + 1] - sep[i]) > 1)
+			words++;
+	return (words);
+}
 
-    int sep[100];
-    int sep_number = separators((char *)s, c, sep); // ADDED: cast for existing helper
-    int word_index = 0;
+char	**ft_split(char const *s, char c)
+{
+	char	**mat;
+	int		sep[100];
+	int		sep_no;
+	int		j;
+	int		i;
 
-    // CHANGED: removed ft_strtrim() and the invalid set allocation
-    for (int i = 0; i < sep_number; i++)
-    {
-        if (sep[i + 1] - sep[i] > 1) // CHANGED: use consistent boundary differences
-        {
-            word_matrix[word_index] = copy_string(
-                (char *)s, sep[i] + 1, sep[i + 1] - 1);
-
-            if (!word_matrix[word_index]) // ADDED: handle copy allocation failure
-            {
-                for (int j = 0; j < word_index; j++)
-                    free(word_matrix[j]); // ADDED: free previously allocated words
-                free(word_matrix); // ADDED: free the array
-                return NULL;
-            }
-            word_index++;
-        }
-    }
-    word_matrix[word_index] = NULL;
-    return word_matrix;
+	if (!s)
+		return (NULL);
+	mat = malloc(sizeof(char *) * (count_words(sep, &sep_no, s, c) + 1));
+	if (!mat)
+		return (NULL);
+	i = -1;
+	j = 0;
+	while (++i < (sep_no - 1))
+	{
+		if ((sep[i + 1] - sep[i]) > 1)
+		{
+			mat[j] = copy_string(s, sep[i] + 1, sep[i + 1] - 1);
+			if (!mat[j])
+				return (free_words(mat, j), NULL);
+			j++;
+		}
+	}
+	mat[j] = NULL;
+	return (mat);
 }
 
 // void print_words(char **words)

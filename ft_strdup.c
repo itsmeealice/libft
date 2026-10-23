@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 00:21:07 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/17 15:59:16 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/23 00:35:52 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ char	*ft_strdup(const char *s)
 {
 	char	*new_s;
 	size_t	i;
-	size_t s_len = ft_strlen(s);
+	size_t	s_len;
 
+	s_len = ft_strlen(s);
 	new_s = NULL;
 	new_s = malloc(s_len + 1);
 	if (new_s == NULL)
-		return NULL;
+		return (NULL);
 	i = 0;
 	while (i < s_len)
 	{

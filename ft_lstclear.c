@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 17:26:50 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/22 21:33:44 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/23 00:02:56 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,17 @@
 //     char *content = (char *)content_to_delete;
 //    free(content);
 // }
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list *tmp;
-    
-    while(*lst)
-    {        
-        tmp = *lst;
-        (*lst) = (*lst) -> next; 
-        ft_lstdelone(tmp, del);
-    }
-    
-    (*lst) = NULL;
+	t_list	*tmp;
+
+	while (*lst)
+	{
+		tmp = *lst;
+		(*lst) = (*lst)-> next;
+		ft_lstdelone(tmp, del);
+	}
+	(*lst) = NULL;
 }
 // void ft_print(t_list **lst)
 // {
@@ -48,6 +47,4 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
 //     ft_lstadd_back(&lista, ft_lstnew(ft_strdup("3")));
 //     ft_lstclear(&lista, del);
 //     ft_print(&lista);
-
-   
 // }

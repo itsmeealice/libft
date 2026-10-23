@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 12:00:34 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/22 16:33:38 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/23 00:16:34 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    if(!*lst)
-    {
-        *lst = new;
-        return;
-    }
-    t_list *node = *lst;
-    
-    while (node -> next)
-    {
-       node = node -> next;
-    }
-    
-    node -> next = new;
+	t_list	*node;
+
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	node = *lst;
+	while (node -> next)
+	{
+		node = node -> next;
+	}
+	node -> next = new;
 }
 // int main(void)
 // {
