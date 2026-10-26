@@ -6,12 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 12:11:27 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:01:19 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:32:28 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 // static void del(void *content_to_delete)

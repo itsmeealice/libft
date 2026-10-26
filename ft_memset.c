@@ -6,14 +6,11 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:31:41 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 01:01:18 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:33:54 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <bsd/string.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

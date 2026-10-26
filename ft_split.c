@@ -6,7 +6,7 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 12:05:48 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 15:40:45 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:37:57 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,29 +103,9 @@ char	**ft_split(char const *s, char c)
 //         printf("%s\n", words[i]);
 //     printf("\n");
 // }
-
 // int main(void)
 // {
 //     char **words;
-
-//     words = ft_split("hello", 'x');
-//     print_words(words);
-
-//     words = ft_split("xxx", 'x');
-//     print_words(words);
-
-//     words = ft_split("", 'x');
-//     print_words(words);
-
-//     words = ft_split("xhello", 'x');
-//     print_words(words);
-
-//     words = ft_split("hellox", 'x');
-//     print_words(words);
-
-//     words = ft_split("hello", 'l');
-//     print_words(words);
-
-//     words = ft_split("  hello  world  ", ' ');
+//     words = ft_split("hello", '0');
 //     print_words(words);
 // }

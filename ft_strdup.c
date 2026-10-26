@@ -6,12 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 00:21:07 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:35:52 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:34:51 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

@@ -6,12 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 17:51:35 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 11:45:03 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:36:00 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static	int	ft_is_in_set(char a, const char *set)

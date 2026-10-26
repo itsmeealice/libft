@@ -6,14 +6,11 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 10:43:24 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:48:50 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:31:59 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <limits.h>
+#include "libft.h"
 
 static int	digit_count(long long *n, int *isnegative)
 {

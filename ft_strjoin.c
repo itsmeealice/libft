@@ -6,13 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 16:28:12 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/19 16:42:12 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:35:05 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

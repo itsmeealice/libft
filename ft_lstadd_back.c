@@ -6,12 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 12:00:34 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:16:34 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:32:04 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)

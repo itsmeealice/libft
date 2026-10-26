@@ -6,13 +6,11 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 22:55:43 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/22 21:19:59 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:44:42 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
@@ -23,7 +21,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 
 	if (size == 0 || nitems == 0)
 	{
-		return (malloc(1));
+		return (malloc(0));
 	}
 	if (nitems > SIZE_MAX / size)
 		return (NULL);

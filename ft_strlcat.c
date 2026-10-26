@@ -6,14 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 10:19:47 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/18 18:50:30 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:35:10 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static	size_t	ft_safe_strlen(char *str, size_t size)

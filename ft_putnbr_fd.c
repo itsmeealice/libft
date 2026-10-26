@@ -6,15 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 15:06:44 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:34:42 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:34:21 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
 #include "libft.h"
 
 static void	ft_putchar(char c, int fd)

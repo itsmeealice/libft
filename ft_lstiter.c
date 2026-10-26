@@ -6,11 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 22:14:04 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:04:42 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:32:35 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 // void toUppercase(void * ptr)

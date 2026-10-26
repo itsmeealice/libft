@@ -6,13 +6,11 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 09:51:16 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 04:36:28 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:33:40 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+#include "libft.h"
 
 void	ft_bytecopy(char *byte_dest, char *byte_src, int n, int direction)
 {

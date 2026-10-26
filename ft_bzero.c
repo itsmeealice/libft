@@ -6,13 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:57:52 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/19 14:28:28 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:30:32 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

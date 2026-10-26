@@ -6,12 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 11:48:04 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:15:07 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:33:00 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)

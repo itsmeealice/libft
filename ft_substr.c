@@ -6,12 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 12:30:07 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 11:58:09 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:36:05 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 // void	check_allocation(char *s)

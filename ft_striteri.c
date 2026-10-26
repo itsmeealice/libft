@@ -6,11 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 13:37:50 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:09:50 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:34:59 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 // void touppercase(unsigned int c, char *a)

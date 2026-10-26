@@ -6,14 +6,11 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:05:28 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/12 12:13:08 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:31:42 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <bsd/string.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

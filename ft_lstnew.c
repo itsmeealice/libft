@@ -6,12 +6,10 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 15:56:03 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/23 00:05:36 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:32:54 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

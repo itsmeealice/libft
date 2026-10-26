@@ -6,14 +6,11 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:14:09 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/12 12:27:11 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:35:23 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <bsd/string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

@@ -6,14 +6,11 @@
 /*   By: apazitor <apazitor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 10:52:45 by apazitor          #+#    #+#             */
-/*   Updated: 2026/10/15 03:36:57 by apazitor         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:31:35 by apazitor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <bsd/string.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
