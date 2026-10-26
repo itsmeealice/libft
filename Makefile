@@ -51,8 +51,6 @@ ft_lstmap.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
-B0 = $(BS:.c=.o)
-
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
